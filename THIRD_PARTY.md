@@ -28,12 +28,31 @@ This inventory was last walked on 2026-09-25 against `build.zig.zon` and
 | stb_image | © 2017 Sean Barrett and contributors | public domain / MIT (dual) | https://github.com/nothings/stb |
 | vulkan-zig (generated bindings) | © Robin Voetter | MIT | https://github.com/Snektron/vulkan-zig |
 | Vulkan-Headers | © 2015–2024 The Khronos Group Inc. | Apache-2.0 | https://github.com/KhronosGroup/Vulkan-Headers |
-| JetBrains Mono (typeface) | © 2020 JetBrains s.r.o. | SIL Open Font License 1.1 | https://www.jetbrains.com/lp/mono/ |
-| Nerd Fonts glyphs | © 2014 Ryan L McIntyre | MIT | https://github.com/ryanoasis/nerd-fonts |
+| JetBrains Mono (typeface) | © 2020 The JetBrains Mono Project Authors | SIL OFL 1.1 | https://github.com/JetBrains/JetBrainsMono |
+| Nerd Fonts patch | © 2014 Ryan L McIntyre | SIL OFL 1.1 | https://github.com/ryanoasis/nerd-fonts |
 
-The embedded fonts are subsets; see `src/ui/fonts/LICENSE` for the exact
-license texts and the subsetting command. The app icon in `assets/` is
-original zol artwork.
+The embedded fonts are subsets; see `src/ui/fonts/LICENSE` for the subsetting
+command. The patched font file is distributed under the SIL Open Font License
+1.1 (the Nerd Fonts *tooling* is MIT, but only the patched font ships). Full
+license texts are under `LICENSES/` (see below).
+
+The app icon in `assets/` is original zol artwork.
+
+## License texts
+
+Full copies of every license referenced above ship alongside this file:
+
+| SPDX | File |
+|---|---|
+| MIT | `LICENSES/MIT.txt` |
+| Apache-2.0 | `LICENSES/Apache-2.0.txt` |
+| SIL OFL 1.1 | `LICENSES/OFL-1.1.txt` |
+| FreeType License (FTL) | `LICENSES/FTL.txt` |
+| MPL-2.0 | `LICENSES/MPL-2.0.txt` |
+
+Each component's copyright notice is in the tables above. This satisfies the
+"include the copyright notice and license" conditions of MIT, Apache-2.0, and
+the OFL.
 
 FreeType is dual-licensed under the FTL and GPLv2. zol uses it under the
 **FTL**; the GPL option is not taken. Vulkan is loaded at runtime with

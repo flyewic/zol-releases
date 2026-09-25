@@ -53,4 +53,4 @@ https://github.com/flyewic/zol-releases/issues
 
 The zol binary is proprietary, all rights reserved; see `LICENSE`. It may be
 run and redistributed unmodified with its notices. Third-party components are
-listed in `THIRD_PARTY.md`.
+listed in `THIRD_PARTY.md`, and the full license texts are under `LICENSES/`.
