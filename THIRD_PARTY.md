@@ -14,20 +14,20 @@ This inventory was last walked on 2026-09-25 against `build.zig.zon` and
 
 | Component | Copyright | License | Upstream |
 |---|---|---|---|
-| DVUI | © David Vanderson and contributors | MIT | https://github.com/david-vanderson/dvui (fork: https://github.com/flyewic/dvui-zol) |
-| TinyVG (decoder, via DVUI `tvg`) | © TinyVG contributors | MIT | https://github.com/ikskuh/TinyVG |
-| zig-lib-svg2tvg | © nat3Github contributors | MIT | https://github.com/nat3Github/zig-lib-svg2tvg |
-| wio | © Elaine Gibson and contributors | MIT | https://github.com/sourgrasses/wio (fork: https://github.com/flyewic/wio-zol) |
+| DVUI | © David Vanderson and Contributors | MIT | https://github.com/david-vanderson/dvui (fork: https://github.com/flyewic/dvui-zol) |
+| TinyVG (decoder, vendored by DVUI/`svg2tvg`) | © 2020 Felix Queißner | MIT | https://github.com/ikskuh/TinyVG |
+| zig-lib-svg2tvg | © 2025 nat3 | MIT | https://github.com/nat3Github/zig-lib-svg2tvg |
+| wio | © Elaine Gibson, et al. | MIT | https://github.com/sourgrasses/wio (fork: https://github.com/flyewic/wio-zol) |
 | Ghostty / libghostty-vt | © 2024 Mitchell Hashimoto, Ghostty contributors | MIT | https://github.com/ghostty-org/ghostty |
-| tree-sitter runtime | © 2018 Max Brunsfeld, tree-sitter contributors | MIT | https://github.com/tree-sitter/tree-sitter |
+| tree-sitter runtime | © 2018 Max Brunsfeld | MIT | https://github.com/tree-sitter/tree-sitter |
 | zig-tree-sitter (bindings) | © 2024 tree-sitter contributors | MIT | https://github.com/tree-sitter/zig-tree-sitter |
 | tree-sitter-zig grammar | © 2024 Amaan Qureshi | MIT | https://github.com/david-vanderson/tree-sitter-zig |
 | KDL parser for Zig (`kdl-zol` fork) | © 2025 Colin Jones | MIT | https://github.com/flyewic/kdl-zig-zol |
 | QuickJS | © 2017–2021 Fabrice Bellard, Charlie Gordon | MIT | https://bellard.org/quickjs/ |
-| FreeType | © 1996–2024 David Turner, Robert Wilhelm, Werner Lemberg | FreeType License (FTL) | https://freetype.org |
-| stb_image | © 2017 Sean Barrett and contributors | public domain / MIT (dual) | https://github.com/nothings/stb |
+| FreeType | © 1996–2002, 2006 David Turner, Robert Wilhelm, and Werner Lemberg | FreeType License (FTL) | https://freetype.org |
+| stb_image | © 2017 Sean Barrett | public domain / MIT (dual) | https://github.com/nothings/stb |
 | vulkan-zig (generated bindings) | © Robin Voetter | MIT | https://github.com/Snektron/vulkan-zig |
-| Vulkan-Headers | © 2015–2024 The Khronos Group Inc. | Apache-2.0 | https://github.com/KhronosGroup/Vulkan-Headers |
+| Vulkan-Headers (header-only; generates the bindings) | © 2015–2023 The Khronos Group Inc. | Apache-2.0 or MIT | https://github.com/KhronosGroup/Vulkan-Headers |
 | JetBrains Mono (typeface) | © 2020 The JetBrains Mono Project Authors | SIL OFL 1.1 | https://github.com/JetBrains/JetBrainsMono |
 | Nerd Fonts patch | © 2014 Ryan L McIntyre | SIL OFL 1.1 | https://github.com/ryanoasis/nerd-fonts |
 
