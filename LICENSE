@@ -1,0 +1,27 @@
+zol — proprietary license
+
+Copyright (c) 2026 flyewic. All rights reserved.
+
+This software and its accompanying documentation are proprietary. No part
+of this software may be copied, modified, distributed, sublicensed, or sold
+without the prior written permission of the copyright holder, except as
+expressly permitted below.
+
+Permission is granted to any person who obtains a copy of a zol binary
+distributed by the copyright holder to run that binary for any lawful
+purpose, and to redistribute that binary unmodified together with this
+license and THIRD_PARTY.md.
+
+No rights are granted in the zol source code, which is not published and
+remains confidential.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+Third-party components are licensed under their own terms; see
+THIRD_PARTY.md. This grant covers only original zol code.
