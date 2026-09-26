@@ -101,6 +101,17 @@ if [ -d "$src/languages" ]; then
     cp -a "$src/languages" "$LIBDIR/languages"
 fi
 
+# Keep the notices beside the installed copy: MIT/Apache/OFL require the
+# copyright notice and license to travel with each copy of the software.
+mkdir -p "$LIBDIR"
+for f in LICENSE THIRD_PARTY.md; do
+    [ -f "$src/$f" ] && install -m644 "$src/$f" "$LIBDIR/$f"
+done
+if [ -d "$src/LICENSES" ]; then
+    rm -rf "${LIBDIR}/LICENSES"
+    cp -a "$src/LICENSES" "$LIBDIR/LICENSES"
+fi
+
 "$PREFIX/zol" --install-desktop || printf 'zol install: warning: --install-desktop failed\n' >&2
 
 "$PREFIX/zol" --version

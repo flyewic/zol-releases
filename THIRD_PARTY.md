@@ -30,13 +30,21 @@ This inventory was last walked on 2026-09-25 against `build.zig.zon` and
 | Vulkan-Headers (header-only; generates the bindings) | © 2015–2023 The Khronos Group Inc. | Apache-2.0 or MIT | https://github.com/KhronosGroup/Vulkan-Headers |
 | JetBrains Mono (typeface) | © 2020 The JetBrains Mono Project Authors | SIL OFL 1.1 | https://github.com/JetBrains/JetBrainsMono |
 | Nerd Fonts patch | © 2014 Ryan L McIntyre | SIL OFL 1.1 | https://github.com/ryanoasis/nerd-fonts |
+| Material Icon Theme (default file/folder icons) | © 2023 Philipp Kief | MIT | https://github.com/PKief/vscode-material-icon-theme |
+| Lucide (UI chrome icons) | © Lucide Contributors | ISC | https://github.com/lucide-icons/lucide |
 
 The embedded fonts are subsets; see `src/ui/fonts/LICENSE` for the subsetting
 command. The patched font file is distributed under the SIL Open Font License
 1.1 (the Nerd Fonts *tooling* is MIT, but only the patched font ships). Full
 license texts are under `LICENSES/` (see below).
 
-The app icon in `assets/` is original zol artwork.
+The app icon in `assets/` is original zol artwork. The default file/folder icon
+pack derives its icons from Material Icon Theme, pre-rasterized to PNG (MIT;
+`src/config/icon_themes/material/LICENSE`). The pack's name/suffix/folder
+mappings are generated at build time from the vendored upstream manifest
+`src/config/icon_themes/material/source/material-icons.json` (MIT;
+`.../source/LICENSE`; see `src/config/material_gen.zig`). The embedded UI chrome
+PNGs are derived from Lucide (ISC; `src/ui/icons/LICENSE`).
 
 ## License texts
 
@@ -49,6 +57,7 @@ Full copies of every license referenced above ship alongside this file:
 | SIL OFL 1.1 | `LICENSES/OFL-1.1.txt` |
 | FreeType License (FTL) | `LICENSES/FTL.txt` |
 | MPL-2.0 | `LICENSES/MPL-2.0.txt` |
+| ISC | `LICENSES/ISC.txt` |
 
 Each component's copyright notice is in the tables above. This satisfies the
 "include the copyright notice and license" conditions of MIT, Apache-2.0, and
