@@ -30,13 +30,14 @@ This inventory was last walked on 2026-09-25 against `build.zig.zon` and
 | Vulkan-Headers (header-only; generates the bindings) | © 2015–2023 The Khronos Group Inc. | Apache-2.0 or MIT | https://github.com/KhronosGroup/Vulkan-Headers |
 | JetBrains Mono (typeface) | © 2020 The JetBrains Mono Project Authors | SIL OFL 1.1 | https://github.com/JetBrains/JetBrainsMono |
 | Nerd Fonts patch | © 2014 Ryan L McIntyre | SIL OFL 1.1 | https://github.com/ryanoasis/nerd-fonts |
+| Noto Emoji (monochrome emoji fallback) | © 2013 Google Inc. | SIL OFL 1.1 | https://github.com/googlefonts/noto-emoji |
 | Material Icon Theme (default file/folder icons) | © 2023 Philipp Kief | MIT | https://github.com/PKief/vscode-material-icon-theme |
 | Lucide (UI chrome icons) | © Lucide Contributors | ISC | https://github.com/lucide-icons/lucide |
 
 The embedded fonts are subsets; see `src/ui/fonts/LICENSE` for the subsetting
-command. The patched font file is distributed under the SIL Open Font License
-1.1 (the Nerd Fonts *tooling* is MIT, but only the patched font ships). Full
-license texts are under `LICENSES/` (see below).
+commands. The patched font file and the Noto Emoji subset are distributed under
+the SIL Open Font License 1.1 (the Nerd Fonts *tooling* is MIT, but only the
+patched font ships). Full license texts are under `LICENSES/` (see below).
 
 The app icon in `assets/` is original zol artwork. The default file/folder icon
 pack derives its icons from Material Icon Theme, pre-rasterized to PNG (MIT;
