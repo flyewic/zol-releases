@@ -101,6 +101,14 @@ if [ -d "$src/languages" ]; then
     cp -a "$src/languages" "$LIBDIR/languages"
 fi
 
+# Bundled scripted plugins (discovered but disabled until the user enables one).
+# `bundledPluginsDir` searches `~/.local/lib/zol/plugins` when installed.
+if [ -d "$src/plugins" ]; then
+    rm -rf "${LIBDIR}/plugins"
+    mkdir -p "$LIBDIR"
+    cp -a "$src/plugins" "$LIBDIR/plugins"
+fi
+
 # Keep the notices beside the installed copy: MIT/Apache/OFL require the
 # copyright notice and license to travel with each copy of the software.
 mkdir -p "$LIBDIR"

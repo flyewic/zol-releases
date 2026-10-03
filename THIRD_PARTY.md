@@ -7,8 +7,8 @@ the licenses below. zol's own terms are in `LICENSE`.
 
 Nothing here grants rights in the zol source, which is not published.
 
-This inventory was last walked on 2026-09-25 against `build.zig.zon` and
-`vendor/` at version 0.1.0.
+This inventory was last walked on 2026-10-03 against `build.zig.zon` and
+`vendor/` at version 0.4.0.
 
 ## Linked runtime components
 
@@ -16,7 +16,7 @@ This inventory was last walked on 2026-09-25 against `build.zig.zon` and
 |---|---|---|---|
 | DVUI | © David Vanderson and Contributors | MIT | https://github.com/david-vanderson/dvui (fork: https://github.com/flyewic/dvui-zol) |
 | TinyVG (decoder, vendored by DVUI/`svg2tvg`) | © 2020 Felix Queißner | MIT | https://github.com/ikskuh/TinyVG |
-| zig-lib-svg2tvg | © 2025 nat3 | MIT | https://github.com/nat3Github/zig-lib-svg2tvg |
+| zig-lib-svg2tvg | © 2025 nat3 | MIT | https://github.com/nat3Github/zig-lib-svg2tvg (fork: https://github.com/flyewic/zig-lib-svg2tvg, gradient support) |
 | wio | © Elaine Gibson, et al. | MIT | https://github.com/sourgrasses/wio (fork: https://github.com/flyewic/wio-zol) |
 | Ghostty / libghostty-vt | © 2024 Mitchell Hashimoto, Ghostty contributors | MIT | https://github.com/ghostty-org/ghostty |
 | tree-sitter runtime | © 2018 Max Brunsfeld | MIT | https://github.com/tree-sitter/tree-sitter |
@@ -40,9 +40,10 @@ the SIL Open Font License 1.1 (the Nerd Fonts *tooling* is MIT, but only the
 patched font ships). Full license texts are under `LICENSES/` (see below).
 
 The app icon in `assets/` is original zol artwork. The default file/folder icon
-pack derives its icons from Material Icon Theme, pre-rasterized to PNG (MIT;
-`src/config/icon_themes/material/LICENSE`). The pack's name/suffix/folder
-mappings are generated at build time from the vendored upstream manifest
+pack vendors the upstream Material Icon Theme SVG sources (MIT;
+`src/config/icon_themes/material/LICENSE`), converted and rasterized on demand by
+`src/ui/icon_assets.zig`. The pack's name/suffix/folder mappings are generated at
+build time from the vendored upstream manifest
 `src/config/icon_themes/material/source/material-icons.json` (MIT;
 `.../source/LICENSE`; see `src/config/material_gen.zig`). The embedded UI chrome
 PNGs are derived from Lucide (ISC; `src/ui/icons/LICENSE`).
@@ -71,12 +72,12 @@ FreeType is dual-licensed under the FTL and GPLv2. zol uses it under the
 ## Vendored tree-sitter grammars
 
 Each grammar under `vendor/tree_sitter/<id>/` is a copy of generated C sources
-from the upstream repository below. The editor never links these into the
-executable: they are built as `grammar.so` packs under `languages/<id>/` and
-loaded at runtime. The highlight queries under `src/syntax/queries/` are
-derived from the respective upstream repository; Kotlin's is derived from
-nvim-treesitter (© nvim-treesitter contributors, Apache-2.0), as noted in that
-file.
+from the upstream repository below. All but two are built as `grammar.so` packs
+under `languages/<id>/` and loaded at runtime; `javascript` and `kdl` are linked
+statically into the executable (Zig is a separate dependency, `tree_sitter_zig`).
+The highlight queries under `src/syntax/queries/` are derived from the
+respective upstream repository; Kotlin's is derived from nvim-treesitter
+(© nvim-treesitter contributors, Apache-2.0), as noted in that file.
 
 | id | Upstream | License |
 |---|---|---|

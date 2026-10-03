@@ -11,7 +11,8 @@ curl -fsSL https://github.com/flyewic/zol-releases/releases/latest/download/inst
 ```
 
 The installer writes `~/.local/bin/zol`, puts the grammar packs under
-`~/.local/lib/zol/languages`, and registers a desktop entry. Re-running it
+`~/.local/lib/zol/languages` and the bundled plugins under
+`~/.local/lib/zol/plugins`, and registers a desktop entry. Re-running it
 upgrades in place. Make sure `~/.local/bin` is on your `PATH`.
 
 Pin a specific version with `ZOL_VERSION`:
