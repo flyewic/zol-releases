@@ -24,6 +24,59 @@ curl -fsSL https://github.com/flyewic/zol-releases/releases/latest/download/inst
 A package-managed `zol` is never overwritten; if one is found the installer
 stops.
 
+## Nix / NixOS
+
+This repository is also a Nix flake, so it installs from the same release
+tarball with no source access and no Zig toolchain. Add it as an input:
+
+```nix
+{
+  inputs.zol.url = "github:flyewic/zol-releases";
+
+  outputs = { self, nixpkgs, zol, ... }: {
+    nixosConfigurations.host = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        zol.nixosModules.default
+        {
+          programs.zol.enable = true;
+        }
+      ];
+    };
+  };
+}
+```
+
+zol's binary is proprietary (all rights reserved, redistributable unmodified),
+so nixpkgs treats it as unfree and refuses to install it until you allow it.
+Add a predicate for just this package (recommended), or `allowUnfree = true` to
+allow every unfree package:
+
+```nix
+nixpkgs.config.allowUnfreePredicate = pkg:
+  builtins.elem (nixpkgs.lib.getName pkg) [ "zol" ];
+```
+
+The `programs.zol` module only adds the package to
+`environment.systemPackages`; it does not change your unfree policy, so the
+predicate above (or `allowUnfree`) is required either way. Without the module:
+
+```nix
+environment.systemPackages = [ inputs.zol.packages.${pkgs.system}.default ];
+```
+
+For an ad-hoc run, flakes evaluate nixpkgs themselves, so pass the policy
+through the environment:
+
+```sh
+NIXPKGS_ALLOW_UNFREE=1 nix run --impure github:flyewic/zol-releases
+```
+
+`inputs.zol.overlays.default` exposes `pkgs.zol`. The flake provides
+`x86_64-linux` only (matching the release tarball); the Vulkan loader ships with
+the package and a working driver/ICD comes from the host
+(`hardware.graphics.enable = true;` on NixOS).
+
 ## Platforms
 
 Linux `x86_64` is the only supported release target for now. macOS and Windows
